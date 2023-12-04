@@ -23,7 +23,8 @@ scanButton.addEventListener("click", async () => {
           log(`Text Record Data: ${text}`);
         } else if (record.recordType === 'url') {
           // Handle URL record type
-          const url = record.data;
+          const textDecoder = new TextDecoder();
+          const url = textDecoder.decode(record.data);
           log(`URL Record Data: ${url}`);
         } else {
           // Handle other record types as needed
