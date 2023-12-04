@@ -29,6 +29,7 @@ scanButton.addEventListener("click", async () => {
           // Handle other record types as needed
           log(`Record Data: ${record.data}`);
         }
+      });
     });
   } catch (error) {
     log("Argh! " + error);
